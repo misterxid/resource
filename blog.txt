@@ -9,6 +9,7 @@ import urllib
 from bs4 import BeautifulSoup
 colorama.init()
 
+
 filename = "_grabv7.txt"
 try:
     open(filename, "a")
@@ -30,17 +31,6 @@ def stana():
         sys.stdout.write(i)
         sys.stdout.flush()
         time.sleep(0.02)
-def ketik(teks):
- for i in teks + "\n":
-  sys.stdout.write(i)
-  sys.stdout.flush()
-  time.sleep(0.001)
-def runner(teks):
- for i in teks + "\n":
-  sys.stdout.write(i)
-  sys.stdout.flush()
-  time.sleep(0.00001)
-  
 def simpan(konteks):
     #
     try:
@@ -87,7 +77,7 @@ def get_source(page):
 		except requests.exceptions:
 			print("\x1b[0;31m ERROR! Please check your connection !!!")
 			
-ketik("""\033[32m
+print("""\033[32m
  \033[32m _____            _       _____      _           _             _     \033[32m
  \033[37m|  __ \          | |     / ____|    (_)         (_)           | |    \033[37m
  \033[32m| |  | | ___  ___| | __ | |     _ __ _ _ __ ___  _ _ __   __ _| |____\033[32m
@@ -101,8 +91,8 @@ ketik("""\033[32m
                                                          
 \033[0m""")
 time.sleep(2)
-ketik("\033[37m[\033[32mHow much page?\033[32m\033[37m]\033[37m")
-p = input("\033[37mPage : ")
-msg = ("\033[32mGrabbed Started...\n\033[32m")
+print("\033[37m[\033[32mHow much page?\033[32m\033[37m]\033[37m")
+p = input("Page : ")
+msg = ("Grabbed Started...\n")
 stana()
 threading.Thread(target=get_source, args=(p,)).start()
