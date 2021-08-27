@@ -59,9 +59,9 @@ def final(source):
             parse_domain = parse_teks(domain)
             try:
                 if cek_simpan:
-                    runner("\033[32m- site created : \033[37m"+waktu+"\033[37m | \033[32mDomains : \033[32m\033[37m"+parse_domain)
+                    print("\033[32m- site created : \033[37m"+waktu+"\033[37m | \033[32mDomains : \033[32m\033[37m"+parse_domain)
                 else:
-                    runner("\033[32m-\033[32m\033[31m Failed \033[31m\033[31mDuplicate Domains : \033[31m\033[37m"+parse_domain)
+                    print("\033[32m-\033[32m\033[31m Failed \033[31m\033[31mDuplicate Domains : \033[31m\033[37m"+parse_domain)
             except:
                 pass
     except:
