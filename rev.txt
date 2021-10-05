@@ -22,7 +22,7 @@ print('''%s
  / /_/ (__  )    / _, _/  __/ |/ /  __/ /  (__  )  __// // ____/ 
 /_____/____/____/_/ |_|\___/|___/\___/_/  /____/\___/___/_/      
           /_____/                                                
--> Reverse IP Unlimited V 1.0
+-> Reverse IP Unlimited Version 1.0 beta 
 -> Copyright, Destroy Squad team 2021, destroysquad.com
 -> Author Mister_XID 
 %s
