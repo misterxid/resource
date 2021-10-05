@@ -1,8 +1,6 @@
 G='\033[0;32m';C='\033[0;36m';W='\033[0;37m';R='\033[0;31m';J='\033[42;1m';M='\033[41;1m'
 import requests as r
 import colorama
-import os
-os.system("clear")
 from colorama import init												
 init(autoreset=True)
 from colorama import Fore								
@@ -30,7 +28,7 @@ print('''%s
 %s
 '''%(G,R))
 key=input("lisensi ->: ")
-if key != "pepek":
+if key != "DS-2018-2021":
 	exit("{}Lisensi invalid!, Please contact admin : {} misterxidgoid@gmail.com ".format(fr,fg))
 file=open(input("IPs List -->: ")).read().splitlines()
 #perulangan nggo file
