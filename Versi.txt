@@ -23,10 +23,10 @@ def ketik(teks):
   sys.stdout.flush()
   time.sleep(00.1)
 key=input("lisensi : ")
-if key == "V2":
+if key == "DS-REV2-2018-2021":
 	print("{}-> Lisensi valid".format(fg))
 	time.sleep(2)
-	ketik ("-> Status licensi (Active 1 days)")
+	ketik ("-> Status licensi (Active 3 Month)")
 else:
 	exit("{}Lisensi invalid!, Please contact admin : {} misterxidgoid@gmail.com ".format(fr,fg))
 #input file trus splitlines gae split ben penak ekse ne
