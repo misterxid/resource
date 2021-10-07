@@ -1,0 +1,53 @@
+G='\033[0;32m';C='\033[0;36m';W='\033[0;37m';R='\033[0;31m';J='\033[42;1m';M='\033[41;1m'
+import requests as r
+import colorama
+import os
+import time
+import json
+import sys
+from colorama import init												
+init(autoreset=True)
+from colorama import Fore								
+from colorama import Style	
+colorama.init()	
+fr  =   Fore.RED											
+fc  =   Fore.CYAN											
+fw  =   Fore.WHITE											
+fg  =   Fore.GREEN										
+sd  =   Style.DIM											
+sn  =   Style.NORMAL										
+sb  =   Style.BRIGHT
+def ketik(teks):
+ for i in teks + "\n":
+  sys.stdout.write(i)
+  sys.stdout.flush()
+  time.sleep(00.1)
+key=input("lisensi : ")
+if key == "V2":
+	print("{}-> Lisensi valid".format(fg))
+	time.sleep(2)
+	ketik ("-> Status licensi (Active 1 days)")
+else:
+	exit("{}Lisensi invalid!, Please contact admin : {} misterxidgoid@gmail.com ".format(fr,fg))
+#input file trus splitlines gae split ben penak ekse ne
+print('''%s
+    ____            ____                                ________ 
+   / __ \_____     / __ \___ _   _____  _____________  /  _/ __ \
+ 
+  / / / / ___/    / /_/ / _ \ | / / _ \/ ___/ ___/ _ \ / // /_/ /%s
+ / /_/ (__  )    / _, _/  __/ |/ /  __/ /  (__  )  __// // ____/ 
+/_____/____/____/_/ |_|\___/|___/\___/_/  /____/\___/___/_/      
+          /_____/                                                
+-> Reverse IP Unlimited V 2.0 Premium.
+-> Copyright, Destroy Squad team 2021, destroysquad.com
+-> Author Mister_XID 
+'''%(G,W))
+file=open(input("Ips/Domains list : ")).read().splitlines()
+for ip in file:
+	api=r.get(f"https://reverseip-tools.com/api?q={str(ip)}").text
+	if api != "[]":
+		resp = json.loads(api)["result"]
+		reversed = len(resp)
+		for results in resp:
+			open(f"ds_reversed.txt","a+").write(f"{results}\n")
+	print ("{}[+]{} IP :%s {}--> %s Domains!".format(fg, fr, fg, fg)%(str(ip),reversed))
