@@ -26,7 +26,7 @@ key=input("lisensi : ")
 if key == "DS-REV2-2018-2021":
 	print("{}-> Lisensi valid".format(fg))
 	time.sleep(2)
-	ketik ("-> Status licensi (Active 3 Month)")
+	ketik ("-> Status licensi (Active Expired if buy contact admin.)")
 else:
 	exit("{}Lisensi invalid!, Please contact admin : {} misterxidgoid@gmail.com ".format(fr,fg))
 #input file trus splitlines gae split ben penak ekse ne
@@ -42,12 +42,3 @@ print('''%s
 -> Copyright, Destroy Squad team 2021, destroysquad.com
 -> Author Mister_XID 
 '''%(G,W))
-file=open(input("Ips/Domains list : ")).read().splitlines()
-for ip in file:
-	api=r.get(f"https://reverseip-tools.com/api?q={str(ip)}").text
-	if api != "[]":
-		resp = json.loads(api)["result"]
-		reversed = len(resp)
-		for results in resp:
-			open(f"ds_reversed.txt","a+").write(f"{results}\n")
-	print ("{}[+]{} IP :%s {}--> %s Domains!".format(fg, fr, fg, fg)%(str(ip),reversed))
