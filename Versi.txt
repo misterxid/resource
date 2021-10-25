@@ -26,7 +26,7 @@ key=input("lisensi : ")
 if key == "DS-REV2-2018-2021":
 	print("{}-> Lisensi valid".format(fg))
 	time.sleep(2)
-	ketik ("-> Status licensi (Active Expired if buy contact admin.)")
+	ketik ("-> Status licensi (Expired if buy contact admin.)")
 else:
 	exit("{}Lisensi invalid!, Please contact admin : {} misterxidgoid@gmail.com ".format(fr,fg))
 #input file trus splitlines gae split ben penak ekse ne
